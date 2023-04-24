@@ -1,0 +1,28 @@
+.explore {
+    text-align: center;
+    & h2{
+        margin-top: 3rem;
+        
+        
+    }
+    & p{
+        margin: 2rem;
+    }
+    
+    & button{
+    background-image: linear-gradient(to top,rgba(147,86,220,0.9),rgba(255,121,218,0.9));
+    border-radius: 2rem;
+    padding: 15px 15px 15px 15px;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    box-shadow:0px 3px 3px grey ;
+    transition: transform 200ms;
+}
+    & button:hover{
+    transform: scale(1.02);
+    cursor:pointer;
+    opacity:0.9;
+}
+
+}
