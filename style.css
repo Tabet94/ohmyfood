@@ -63,7 +63,7 @@ body {
 
 /*# sourceMappingURL=style.css.map */
 
-/* Function */
+/* Function ...................................................................................................*/
 
 .function ol{
   display: flex;
@@ -121,7 +121,7 @@ body {
 }
 
 
-/* Restaurants */
+/* Restaurants .............................................................................................. */
 
 .restaurant-list{
   display: flex;
@@ -138,7 +138,7 @@ body {
 }
 
 
-/* MENU CARD */
+/* MENU CARD .......................................................................................................*/
 
 .menu-card{
   position: relative;
@@ -176,7 +176,7 @@ body {
 
 
 
-/* HEART */
+/* HEART ............................................................................................... */
 
 .menu-card .fa-heart{
 font-size: 2rem;
@@ -201,7 +201,7 @@ transition: all 400ms;
   opacity: 1;
 }
 
-/* Footer */
+/* Footer ............................................................................................. */
 
 footer{
   background-color: #353535;
@@ -237,7 +237,7 @@ footer a{
 
 
 
-/* page1 */
+/* page1  ..................................................................................................*/
 
 .fa-arrow-left{
   position: absolute;
@@ -296,18 +296,13 @@ footer a{
 }
   
 .menu-header .fas:hover{
-    opacity: 1;
-  }
-  @media (max-width:800px){
-    .menu-restaurant{
-      flex-direction: column;
-    
+  opacity: 1;
+}
+
   
-    }
-  }
 
  
- /* RESTAURANT-MENU */
+ /* RESTAURANT-MENU ...................................................................................... */
  
 .category-menu{
   display: grid;
@@ -321,9 +316,8 @@ footer a{
   
     
   
-/* CATEGORY-TITLES */
+/* CATEGORY-TITLES ................................................................................................. */
   
-
 .Category-Title {
   font-size: 25px;
   margin-bottom: 1rem;
@@ -344,7 +338,7 @@ footer a{
 }
 
 
-/* MENU-LIST */
+/* MENU-LIST ..................................................................................................... */
 
 .menu-List{
   display:flex ;
@@ -358,7 +352,7 @@ footer a{
 }
 
 
-/* PAGE-ANIMATION */
+/* PAGE-ANIMATION  ..............................................................................................*/
 
 .menu-item{
   opacity: 0;
@@ -388,7 +382,7 @@ footer a{
   }
 }
   
-/* CARD-MENU */
+/* CARD-MENU ..................................................................................................... */
 
 .card-menu {
   display: flex;
@@ -489,24 +483,24 @@ footer a{
   }
 
 
-/* BUTTON */
+/* BUTTON ........................................................................................ */
 
          
 .button{
   background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
-    border-radius: 2rem;
-    padding: 15px 60px 15px 60px;
-    color: white;
-    font-size: 1rem;
-    border: none;
-    box-shadow: 0px 3px 3px grey;
-    transition: transform 200ms;
-    width: 20%;
-    position: absolute;
-    left: 40%;
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
+  border-radius: 2rem;
+  padding: 15px 60px 15px 60px;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  box-shadow: 0px 3px 3px grey;
+  transition: transform 200ms;
+  width: 20%;
+  position: absolute;
+  left: 40%;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
 }
 .button:hover{
   transform: scale(1.02);
@@ -514,79 +508,120 @@ footer a{
   opacity:0.9;
 }
 
+/* LOADING ....................................................................... */
 
-
-
-@media screen and (max-width:768px){
-    .category-menu{
-      grid-template-columns: repeat(1, 1fr);
-    }
-  
-  }
-
-
-  .loading{
-    width: 60px;
-    height: 60px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(75deg);
-    animation: disappear 1s 3s forwards;
-  }
+.loading{
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(75deg);
+  animation: disappear 1s 3s forwards;
+}
   @keyframes disappear{
     to{
       transform: scale(0);
     }
   }
-  .loading::before,
-  .loading::after{
-    content:'';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60px;
-    height:60px;
-    border-radius: 20px;
-    animation: reload 1.5s infinite linear;
+.loading::before,
+.loading::after{
+  content:'';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height:60px;
+  border-radius: 20px;
+  animation: reload 1.5s infinite linear;
+}
+  
+
+@keyframes reload{
+  50%{
+    height: 45px;
   }
-  @keyframes reload{
-    50%{
-      height: 45px;
-    }
-  }
-  .loading::before{
-    box-shadow: 60px 60px #df0b86, -60px -60px #df0b86;
-  }
-  .loading::after{
-    transform: translate(-50%, -50%) rotate(90deg);
-    box-shadow: 60px 60px #99e2d0, -60px -60px #99e2d0;
-  }
+}
+.loading::before{
+  box-shadow: 60px 60px #df0b86, -60px -60px #df0b86;
+}
+.loading::after{
+  transform: translate(-50%, -50%) rotate(90deg);
+  box-shadow: 60px 60px #99e2d0, -60px -60px #99e2d0;
+}
 
  
+ 
+ 
+ 
+ 
+ 
+/* MEDIA QUERIES ...........................................................................*/
 
-  /* MEDIA QUERIES */
-  @media only screen and (max-width: 360px) {
-    header {
-      flex-direction: column;
+   
+    
+    /* MEDIA FOR RESTAURANT MENU .................................................................... */
+    @media screen and (max-width: 768px) {
+      .restaurant-list {
+        flex-direction: column;
+      }
+      .restaurant-list .menu-card {
+        width: 100%; 
+      }
     }
-  }
 
-  @media only screen and (max-width: 360px) {
-    .restaurant-list {
-      flex-direction: column;
+    @media screen and (max-width: 360px) {
+      .restaurant-list .menu-card {
+        width: 100%; 
+      }
     }
-    .restaurant-list .menu-card{
-      width: 350px;
-    }
+
+  
+ /* MEDIA FOR HEADER ......................................................*/
+ @media only screen and (max-width: 360px) {
+  header {
+    flex-direction: column;
   }
+}
+
+
+
+
+ 
+  
+  
+    /*MEDIA FOR MENU RESTAURANT.......................................................*/
+    @media (max-width:800px){
+      .menu-restaurant{
+        flex-direction: column;
+      }
+    }
+
+
+  /*MEDIA FOR CATEGORY MENU...................................................................*/
+  @media screen and (max-width:1024px){
+    .category-menu{
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+
+
+  
+  /* MEDIA FOR MENU LIST AND CARD MENU WRAPPER .................................................................... */
+
+
+
   @media only screen and (max-width: 360px) {
     .menu-List {
       flex-direction: column;
     }
     .card-menu-wrapper{
       width: 325px;
-      color: ;
     }
   }
+
+
+  
