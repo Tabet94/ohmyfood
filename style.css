@@ -193,7 +193,7 @@ transition-duration: 400ms;
 .menu-card .fas{
 color: transparent;
 background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9)); 
--webkit-background-clip: text;
+background-clip: text; 
 opacity: 0;
 transition: all 400ms;
 }
@@ -290,7 +290,7 @@ footer a{
 .menu-header .fas{
   color: transparent;
   background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9)); 
-  -webkit-background-clip: text;
+  background-clip: text;
   opacity: 0;
   transition: all 400ms;
 }
@@ -559,67 +559,71 @@ footer a{
  
 /* MEDIA QUERIES ...........................................................................*/
 
-   
-    
-    /* MEDIA FOR RESTAURANT MENU .................................................................... */
-    @media screen and (max-width: 768px) {
-      .restaurant-list {
-        flex-direction: column;
-      }
-      .restaurant-list .menu-card {
-        width: 100%; 
-      }
-    }
-
-    @media screen and (max-width: 360px) {
-      .restaurant-list .menu-card {
-        width: 100%; 
-      }
-    }
-
-  
- /* MEDIA FOR HEADER ......................................................*/
- @media only screen and (max-width: 360px) {
-  header {
-    flex-direction: column;
-  }
-}
-
-
-
-
- 
-  
-  
-    /*MEDIA FOR MENU RESTAURANT.......................................................*/
-    @media (max-width:800px){
-      .menu-restaurant{
-        flex-direction: column;
-      }
-    }
-
-
-  /*MEDIA FOR CATEGORY MENU...................................................................*/
-  @media screen and (max-width:1024px){
-    .category-menu{
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-
-
-
-
-  
-  /* MEDIA FOR MENU LIST AND CARD MENU WRAPPER .................................................................... */
-
-
-
-  @media only screen and (max-width: 360px) {
-    .menu-List {
+/* MEDIA FOR RESTAURANT MENU .................................................................... */
+  @media screen and (max-width: 992px) {
+    .restaurant-list {
       flex-direction: column;
     }
+    .restaurant-list .menu-card {
+      width: 100%; 
+    }
+  }
+  
+  
+  @media screen and (max-width: 768px) {
+    .restaurant-list {
+      flex-direction: column;
+    }
+    .restaurant-list .menu-card {
+      width: 100%; 
+    }
+  }
+
+  @media screen and (max-width: 360px) {
+    .restaurant-list .menu-card {
+      width: 100%; 
+    }
+  }
+
+  
+/* MEDIA FOR HEADER ......................................................*/
+ @media only screen and (max-width: 360px) {
+    header {
+    flex-direction: column;
+    }
+  }
+
+
+
+/*MEDIA FOR MENU RESTAURANT.......................................................*/
+  @media (min-width:992px){
+    .menu-restaurant{
+      flex-direction: column;
+    }
+    
+  }
+
+
+/*MEDIA FOR CATEGORY MENU...................................................................*/
+  @media screen and (max-width:1024px){
+    .category-menu{
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+
+
+/* MEDIA FOR MENU LIST AND CARD MENU WRAPPER .................................................................... */
+  @media only screen and (max-width: 360px) {
+    .category-menu{
+      width: 100%;
+    }
+    .menu-List {
+      flex-direction: column;
+      width: 100%;
+    }
     .card-menu-wrapper{
-      width: 325px;
+      width: 100%;
     }
   }
 
